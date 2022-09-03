@@ -1,6 +1,6 @@
-.personalData{
-   font-weight: 600;
-   font-size: 1.2em; 
+.personalData {
+  font-weight: 600;
+  font-size: 1.2em;
 }
 
 .card {
@@ -9,7 +9,8 @@
   display: grid;
   grid-template-columns: 2fr 2fr;
   margin-bottom: 20px;
-  height: 250px;
+  min-width: 300px;
+  padding: 10px 10px;
 }
 
 .avatarContainer {
