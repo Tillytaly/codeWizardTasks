@@ -1,0 +1,26 @@
+.personalData{
+   font-weight: 600;
+   font-size: 1.2em; 
+}
+
+.card {
+  border: 1px solid;
+  width: 350px;
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  margin-bottom: 20px;
+  height: 250px;
+}
+
+.avatarContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatar {
+  border: 1px solid;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
