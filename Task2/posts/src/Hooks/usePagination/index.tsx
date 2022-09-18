@@ -1,7 +1,10 @@
 import { useReducer, useCallback, useEffect } from "react";
 import { initialPaginationState, reducer } from "../../Utils";
-import {IUsePagination} from "./types"
-function usePagination(data: any[], howManyEntriesOnPage: number): IUsePagination {
+import { IUsePagination } from "./types";
+function usePagination(
+  data: any[],
+  howManyEntriesOnPage: number
+): IUsePagination {
   const [{ isFirstPage, isLastPage, entriesOnPage }, dispatch] = useReducer(
     reducer,
     initialPaginationState

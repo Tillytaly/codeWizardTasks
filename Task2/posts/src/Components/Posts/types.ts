@@ -1,9 +1,9 @@
 export interface IData {
-    title: string;
-    body: string;
-    id: number;
-  }
+  title: string;
+  body: string;
+  id: number;
+}
 
-  export type TPostsProps ={
-    posts: IData[]
-  }
+export type TPostsProps = {
+  posts: IData[];
+};
