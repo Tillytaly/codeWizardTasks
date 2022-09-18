@@ -1,5 +1,5 @@
-import { useFetch } from "./Hooks";
-import { Posts } from "./Components";
+import { useFetch, usePagination } from "./Hooks";
+import { Posts, Navbar } from "./Components";
 import "./App.css";
 
 function App() {
@@ -7,21 +7,36 @@ function App() {
     "https://jsonplaceholder.typicode.com/posts"
   );
 
+  const {
+    goToNextPage,
+    goToPreviousPage,
+    isFirstPage,
+    isLastPage,
+    entriesOnPage,
+  } = usePagination(postData, 10);
+
+
   if (isError) {
     <div className="App">
-    return <p>{message}</p>
-    </div>
+      return <p>{message}</p>
+    </div>;
   }
 
   if (isLoading) {
     <div className="App">
-    return <p>{message}</p>
-    </div>
+      return <p>{message}</p>
+    </div>;
   }
 
   return (
     <div className="App">
-      <Posts posts={postData} />
+      <Posts posts={entriesOnPage} />
+      <Navbar
+        isFirstPage={isFirstPage}
+        isLastPage={isLastPage}
+        onNextClick={goToNextPage}
+        onPrevClick={goToPreviousPage}
+      />
     </div>
   );
 }

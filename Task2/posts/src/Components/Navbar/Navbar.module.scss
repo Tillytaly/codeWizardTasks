@@ -1,0 +1,15 @@
+.navbar {
+  display: flex;
+  width: 300px;
+  justify-content: space-around;
+  margin: 25px 0;
+}
+
+.navbarButton{
+    font-size: 18px;
+    width: 100px;
+    padding: 5px 5px;
+    border-radius: 5px;
+    background-color: lightblue;
+    font-weight: 600;
+}
